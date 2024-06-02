@@ -1,0 +1,41 @@
+[{
+  "Sub_Category": "Tires and Tubes",
+  "Product_Category": "Accessories",
+  "order_quantity": "78955"
+}, {
+  "Sub_Category": "Bottles and Cages",
+  "Product_Category": "Accessories",
+  "order_quantity": "57279"
+}, {
+  "Sub_Category": "Helmets",
+  "Product_Category": "Accessories",
+  "order_quantity": "37495"
+}, {
+  "Sub_Category": "Caps",
+  "Product_Category": "Clothing",
+  "order_quantity": "17888"
+}, {
+  "Sub_Category": "Fenders",
+  "Product_Category": "Accessories",
+  "order_quantity": "16644"
+}, {
+  "Sub_Category": "Gloves",
+  "Product_Category": "Clothing",
+  "order_quantity": "11044"
+}, {
+  "Sub_Category": "Jerseys",
+  "Product_Category": "Clothing",
+  "order_quantity": "8730"
+}, {
+  "Sub_Category": "Cleaners",
+  "Product_Category": "Accessories",
+  "order_quantity": "7102"
+}, {
+  "Sub_Category": "Socks",
+  "Product_Category": "Clothing",
+  "order_quantity": "4662"
+}, {
+  "Sub_Category": "Hydration Packs",
+  "Product_Category": "Accessories",
+  "order_quantity": "1813"
+}]
