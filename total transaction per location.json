@@ -1,0 +1,31 @@
+[{
+  "State": "California",
+  "order_quantity": "3147"
+}, {
+  "State": "British Columbia",
+  "order_quantity": "2061"
+}, {
+  "State": "England",
+  "order_quantity": "1876"
+}, {
+  "State": "Washington",
+  "order_quantity": "1470"
+}, {
+  "State": "New South Wales",
+  "order_quantity": "1324"
+}, {
+  "State": "Victoria",
+  "order_quantity": "797"
+}, {
+  "State": "Oregon",
+  "order_quantity": "716"
+}, {
+  "State": "Queensland",
+  "order_quantity": "597"
+}, {
+  "State": "Saarland",
+  "order_quantity": "387"
+}, {
+  "State": "Nordrhein-Westfalen",
+  "order_quantity": "368"
+}]

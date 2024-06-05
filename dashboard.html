@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SixCycle Shop</title>
+    <link rel="stylesheet" href="dashboard.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" height="30">
+                SixCycle Shop
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="filters">
+            <button>Negara</button>
+            <button>Gender</button>
+            <button>Umur</button>
+            <button>Category</button>
+        </div>
+        <div class="dashboard-content">
+            <div class="stats">
+                <div class="stat">
+                    <h3>Total Sales</h3>
+                    <p>$1k</p>
+                    <small>+ 8% from yesterday</small>
+                </div>
+                <div class="stat">
+                    <h3>Total Order</h3>
+                    <p>300</p>
+                    <small>+ 5% from yesterday</small>
+                </div>
+                <div class="stat">
+                    <h3>Product Sold</h3>
+                    <p>5</p>
+                    <small>+ 1.2% from yesterday</small>
+                </div>
+                <div class="stat">
+                    <h3>Customers</h3>
+                    <p>1.1 jt</p>
+                    <small>+ 0.5% from yesterday</small>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart" id="revenue-country">
+                    <h4>Revenue by Country</h4>
+                    <img src="map.png" alt="Map">
+                </div>
+                <div class="chart" id="customer-age">
+                    <h4>Customer by Age Group</h4>
+                    <img src="bar-chart.png" alt="Bar Chart">
+                </div>
+                <div class="chart" id="customer-gender">
+                    <h4>Customer by Gender</h4>
+                    <img src="pie-chart.png" alt="Pie Chart">
+                </div>
+                <div class="chart" id="most-ordered">
+                    <h4>Most Ordered Sub Category</h4>
+                    <img src="table.png" alt="Table">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- footer -->
+        <p>&copy; 2024 RevoU Team 6 - Palembang. All rights reserved.</p>
+    </footer>
+</body>
+</html>
