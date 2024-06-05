@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SixCycle Shop</title>
-    <link rel="stylesheet" href="dashboard.css"> 
+    <link rel="stylesheet" href="assets/css/dashboard.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/capstone.js"></script>
 </head>
 <body>
     <section class="header">
         <div class="navbar">
             <div class="logo">
-                <img src="logo.png" alt="Logo" height="30">
+                <img src="./assets/img/Logo.png" alt="Logo" height="30">
                 SixCycle Shop
             </div>
             <nav>
@@ -26,11 +28,14 @@
             </nav>
         </div>
         <div class="filters">
-            <button>Negara</button>
-            <button>Gender</button>
-            <button>Umur</button>
-            <button>Category</button>
-        </div>
+            <select id="contentDropdown" class="custom-select">
+                <option selected disabled hidden>Filter</option>
+                <option value="gender.html">Gender</option>
+                <option value="negara.html">Location</option>
+                <option value="dataset.html">Age</option>
+                <option value="dataset.html">Category</option>
+            </select>
+        </div>  
         <div class="dashboard-content">
             <div class="stats">
                 <div class="stat">
@@ -55,22 +60,66 @@
                 </div>
             </div>
             <div class="charts">
-                <div class="chart" id="revenue-country">
-                    <h4>Revenue by Country</h4>
-                    <img src="map.png" alt="Map">
-                </div>
-                <div class="chart" id="customer-age">
-                    <h4>Customer by Age Group</h4>
-                    <img src="bar-chart.png" alt="Bar Chart">
-                </div>
-                <div class="chart" id="customer-gender">
-                    <h4>Customer by Gender</h4>
-                    <img src="pie-chart.png" alt="Pie Chart">
-                </div>
-                <div class="chart" id="most-ordered">
-                    <h4>Most Ordered Sub Category</h4>
-                    <img src="table.png" alt="Table">
-                </div>
+                <div class="vs-cards">
+                    <div class="vs-card">
+                        <h4>Revenue Per Location</h4>
+                        <div class="chart">
+                            <button id="sortAsc">Ascending</button>
+                            <button id="sortDesc">Descending</button>
+                            <canvas id="chart"></canvas>
+                          </div>
+                    </div>
+                    <div class="vs-card">
+                        <h4>Total Transaction Per Location</h4>
+                        <div class="chart">
+                            <button id="sortAsc2">Ascending</button>
+                            <button id="sortDesc2">Descending</button>
+                            <canvas id="chart2"></canvas>
+                          </div>
+                    </div>
+                    <div class="vs-card">
+                        <h4>Average Revenue Product Category Per Month</h4>
+                        <div class="chart">
+                            <canvas id="chart3"></canvas>
+                          </div>
+                    </div>
+                </div> 
+                <div class="vs-cards">
+                    <div class="vs-card">
+                    <h4>Customers by Gender</h4>
+                        <div class="chart4">
+                            <canvas id="chart4"></canvas>
+                        </div>
+                    </div>
+                    <div class="vs-card">
+                        <h4>Customer by Age Group</h4>
+                        <div class="chart">
+                            <button id="sortAsc5">Ascending</button>
+                            <button id="sortDesc5">Descending</button>
+                            <canvas id="chart5"></canvas>
+                        </div>
+                    </div>
+                    <div class="vs-card">
+                        <h4>Most Ordered Sub Category</h4>
+                        <div class="chart1">
+                          <div class="table-container">
+                            <table class="team-table" id="table">
+                              <thead>
+                                <tr>
+                                  <th>No.</th>
+                                  <th>Sub Category</th>
+                                  <th>Product Category</th>
+                                  <th>Order Quantity</th>
+                                </tr>
+                              </thead>
+                              <tbody id="table-body">
+                                <!-- Data tabel akan dimasukkan di sini menggunakan JavaScript -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>                      
+                </div> 
             </div>
         </div>
     </section>
@@ -79,5 +128,11 @@
         <!-- footer -->
         <p>&copy; 2024 RevoU Team 6 - Palembang. All rights reserved.</p>
     </footer>
+    <script src="./assets/js/chart1.js"></script>
+    <script src="./assets/js/chart2.js"></script>
+    <script src="./assets/js/chart3.js"></script>
+    <script src="./assets/js/chart4.js"></script>
+    <script src="./assets/js/chart5.js"></script>
+    <script src="./assets/js/table6.js"></script>
 </body>
 </html>

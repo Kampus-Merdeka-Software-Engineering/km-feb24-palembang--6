@@ -78,4 +78,10 @@
   "month_name": "July",
   "Product_Category": "Accessories",
   "avg_revenue": "269.0"
-}]
+},
+{
+  "month_name": "July",
+  "Product_Category": "Bikes",
+  "avg_revenue": "0"
+}
+]

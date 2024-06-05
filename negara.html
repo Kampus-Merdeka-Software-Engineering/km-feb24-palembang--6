@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SixCycle Shop</title>
+    <link rel="stylesheet" href="assets/css/negara.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/capstone.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./assets/img/Logo.png" alt="Logo" height="30" />
+          SixCycle Shop
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="filters">
+          <select id="contentDropdown" class="custom-select">
+            <option selected disabled hidden>Filter</option>
+            <option value="gender.html">Gender</option>
+            <option value="negara.html">Location</option>
+            <option value="dataset.html">Age</option>
+            <option value="dataset.html">Category</option>
+          </select>
+      </div>  
+      <h1 style="text-align: center; font-size: 2rem;">Gender</h1> 
+      <div class="dashboard-content">
+        <div class="charts">
+          <div class="vs-cards">
+            <div class="vs-card">
+              <h2>Revenue Per Location</h2>
+              <div class="chart">
+                <button id="sortAsc">Ascending</button>
+                <button id="sortDesc">Descending</button>
+                <canvas id="chart"></canvas>
+              </div>
+            </div>
+            <div class="vs-card">
+              <h2>Total Transaction Per Location</h2>
+              <div class="chart">
+                <button id="sortAsc2">Ascending</button>
+                <button id="sortDesc2">Descending</button>
+                <canvas id="chart2"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- footer -->
+      <p>&copy; 2024 RevoU Team 6 - Palembang. All rights reserved.</p>
+    </footer>
+    <script src="./assets/js/chart1.js"></script>
+    <script src="./assets/js/chart2.js"></script>
+  </body>
+</html>

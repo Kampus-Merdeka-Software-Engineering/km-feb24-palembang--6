@@ -79,6 +79,53 @@ body {
     margin-bottom: 5%;
 }
 
+.team-cards {
+    display: flex;
+    flex-wrap: wrap; /* Baris baru untuk setiap 4 kartu */
+    gap: 20px; /* Jarak antara setiap kartu */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 20px); /* 25% lebar untuk 4 kartu dalam satu baris, dikurangi jarak antara kartu */
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #2F4454;
+    background-color: #2F4454;
+    transition: 0.3s;
+    font-size: 1rem;
+    box-sizing: border-box; /* Perhitungan lebar termasuk padding dan border */
+}
+
+.team-card p {
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.img-box {
+    width: 121px;
+    height: 121px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.img-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Geser ke tengah vertikal dan horizontal */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 footer {
     position: fixed;
     left: 0;
@@ -90,31 +137,26 @@ footer {
     border-radius: 25px 25px 0 0;
 }
 
-@media screen and (max-width: 992px) {
-    .navbar nav ul li {
-        margin-right: 20px;
-    }
-
-    .navbar nav ul li a {
-        font-size: 15px;
-    }
-
-    .team {
-        font-size: 22px;
-    }
-}
-
 @media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
     .navbar .logo {
         margin-left: 20px;
     }
 
-    .navbar nav ul li {
-        margin-right: 15px;
+    .navbar nav {
+        text-align: left;
+        margin-left: 20px;
     }
 
-    .navbar nav ul li a {
-        font-size: 14px;
+    .navbar nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .aboutus {
@@ -124,57 +166,8 @@ footer {
     .team {
         font-size: 20px;
     }
-}
-
-@media screen and (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        padding: 10px 0;
-    }
-
-    .navbar .logo {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .navbar nav {
-        text-align: center;
-    }
-
-    .navbar nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .navbar nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .navbar nav ul li a {
-        font-size: 16px;
-    }
-
-    .aboutus {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .team {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .navbar nav ul li a {
-        font-size: 14px;
-    }
-
-    .team {
-        font-size: 16px;
+    .team-card {
+        width: 100%; /* Ubah lebar kartu menjadi 100% agar satu per baris */
+        margin-bottom: 20px; /* Tambahkan jarak antara setiap kartu */
     }
 }
