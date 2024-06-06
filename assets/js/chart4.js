@@ -18,7 +18,7 @@ fetch('assets/json/customer_by_gender.json')
         labels: ['M', 'F'],
         datasets: [
           {
-            label: 'My First Dataset',
+            label: 'Gender',
             data: [MData.reduce((a, b) => a + b, 0), FData.reduce((a, b) => a + b, 0)],
             backgroundColor: [
               'rgb(255, 99, 132)',
