@@ -11,19 +11,16 @@ fetch('assets/json/customer_by_age_group.json')
     // pengecekan data
     console.log(DataCustomerbyAge);
 
-    // Membuat Salinan Data yang Sedang Diproses ke dalam variable currentData
-    let currentData = [...DataCustomerbyAge]; // Use spread operator to create a copy
-
     const ctx = document.getElementById("chart5").getContext("2d");
 
     let barChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: currentData.map(item => item.Age_Group),
+        labels: DataCustomerbyAge.map(item => item.Age_Group),
         datasets: [
           {
             label: 'Total order_quantity',
-            data: currentData.map(item => item.order_quantity),
+            data: DataCustomerbyAge.map(item => item.order_quantity),
             backgroundColor: "yellow",
             borderColor: "black",
             borderWidth: 1.5
@@ -41,13 +38,13 @@ fetch('assets/json/customer_by_age_group.json')
 
     function updateChart(order) {
       if (order === 'asc') {
-        currentData.sort((a, b) => a.order_quantity - b.order_quantity);
+        DataCustomerbyAge.sort((a, b) => a.order_quantity - b.order_quantity);
       } else {
-        currentData.sort((a, b) => b.order_quantity - a.order_quantity);
+        DataCustomerbyAge.sort((a, b) => b.order_quantity - a.order_quantity);
       }
 
-      barChart.data.labels = currentData.map(item => item.Age_Group);
-      barChart.data.datasets[0].data = currentData.map(item => item.order_quantity);
+      barChart.data.labels = DataCustomerbyAge.map(item => item.Age_Group);
+      barChart.data.datasets[0].data = DataCustomerbyAge.map(item => item.order_quantity);
       barChart.update();
     }
 

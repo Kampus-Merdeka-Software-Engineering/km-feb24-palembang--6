@@ -11,10 +11,6 @@ fetch('assets/json/revenue_per_location.json')
     // Log the data to the console
     console.log(DataRevenue);
 
-    // Membuat Salinan Data yang Sedang Diproses ke dalam variable currentData
-    let currentData = [...DataRevenue];
-
-
     const ctx = document.getElementById("chart").getContext("2d");
 
     let barChart = new Chart(ctx, {
@@ -24,7 +20,7 @@ fetch('assets/json/revenue_per_location.json')
         datasets: [
           {
             label: 'Total Revenue',
-            data: currentData.map(item => item.revenue),
+            data: DataRevenue.map(item => item.revenue),
             backgroundColor: "rgb(54, 162, 235)",
             borderColor: "black",
             borderWidth: 1.5
@@ -42,13 +38,13 @@ fetch('assets/json/revenue_per_location.json')
 
     function updateChart(order) {
       if (order === 'asc') {
-        currentData.sort((a, b) => a.revenue - b.revenue);
+        DataRevenue.sort((a, b) => a.revenue - b.revenue);
       } else {
-        currentData.sort((a, b) => b.revenue - a.revenue);
+        DataRevenue.sort((a, b) => b.revenue - a.revenue);
       }
 
-      barChart.data.labels = currentData.map(item => item.State);
-      barChart.data.datasets[0].data = currentData.map(item => item.revenue);
+      barChart.data.labels = DataRevenue.map(item => item.State);
+      barChart.data.datasets[0].data = DataRevenue.map(item => item.revenue);
       barChart.update();
     }
 

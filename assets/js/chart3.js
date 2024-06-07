@@ -23,19 +23,17 @@ fetch('assets/json/avg_revenue_product_category.json')
     console.log("Clothes Data:", clothesData);
     console.log("Accessories Data:", accessoriesData);
 
-    // Membuat Salinan Data yang Sedang Diproses ke dalam variable currentData
-    let currentData = [...bikeData];
 
     const ctx = document.getElementById("chart3").getContext("2d");
 
     let lineChart = new Chart(ctx, {
       type: "line",
       data: {
-        labels: currentData.map(item => item.month_name),
+        labels: bikeData.map(item => item.month_name),
         datasets: [
           {
             label: 'Bike',
-            data: currentData.map(item => item.avg_revenue),
+            data: bikeData.map(item => item.avg_revenue),
             backgroundColor: "yellow",
             borderColor: "black",
             borderWidth: 1.5
