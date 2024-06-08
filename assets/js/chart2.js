@@ -2,27 +2,19 @@
 fetch('assets/json/total_transaction_per_location.json')
   .then(response => response.json())
   .then(data => {
-    // Menyalin Data Tertentu dari Setiap Objek dalam Array
-    const DataTransaction = data.map(item => ({
-      State: item.State,
-      order_quantity: item.order_quantity
-    }));
-
-    // pengecekan data
-    console.log(DataTransaction);
 
     const ctx = document.getElementById("chart2").getContext("2d");
 
     let barChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: DataTransaction.map(item => item.State),
+        labels: data.map(item => item.State),
         datasets: [
           {
             label: 'Total transaction',
-            data: DataTransaction.map(item => item.order_quantity),
-            backgroundColor: "rgb(255, 99, 132)",
-            borderColor: "black",
+            data: data.map(item => item.order_quantity),
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
             borderWidth: 1.5
           }
         ]
@@ -38,13 +30,13 @@ fetch('assets/json/total_transaction_per_location.json')
 
     function updateChart(order) {
       if (order === 'asc') {
-        DataTransaction.sort((a, b) => a.order_quantity - b.order_quantity);
+        data.sort((a, b) => a.order_quantity - b.order_quantity);
       } else {
-        DataTransaction.sort((a, b) => b.order_quantity - a.order_quantity);
+        data.sort((a, b) => b.order_quantity - a.order_quantity);
       }
 
-      barChart.data.labels = DataTransaction.map(item => item.State);
-      barChart.data.datasets[0].data = DataTransaction.map(item => item.order_quantity);
+      barChart.data.labels = data.map(item => item.State);
+      barChart.data.datasets[0].data = data.map(item => item.order_quantity);
       barChart.update();
     }
 

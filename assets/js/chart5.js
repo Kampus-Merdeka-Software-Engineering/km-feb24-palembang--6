@@ -2,30 +2,26 @@
 fetch('assets/json/customer_by_age_group.json')
   .then(response => response.json())
   .then(data => {
-    // Menyalin Data Tertentu dari Setiap Objek dalam Array
-    const DataCustomerbyAge = data.map(item => ({
-      Age_Group: item.Age_Group,
-      order_quantity: item.order_quantity
-    }));
-
-    // pengecekan data
-    console.log(DataCustomerbyAge);
 
     const ctx = document.getElementById("chart5").getContext("2d");
 
-    let barChart = new Chart(ctx, {
+    let bar = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: DataCustomerbyAge.map(item => item.Age_Group),
-        datasets: [
-          {
-            label: 'Total order_quantity',
-            data: DataCustomerbyAge.map(item => item.order_quantity),
-            backgroundColor: "yellow",
-            borderColor: "black",
-            borderWidth: 1.5
-          }
-        ]
+        labels: data.map(item => item.Age_Group),
+        datasets: [{
+          label: "Customer by Age",
+          data: data.map(item => (parseInt(item.order_quantity))),
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+          ],
+          borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+          ],
+          borderWidth: 1
+        }]
       },
       options: {
         scales: {
@@ -33,19 +29,19 @@ fetch('assets/json/customer_by_age_group.json')
             beginAtZero: true
           }
         }
-      }
+      },
     });
 
     function updateChart(order) {
       if (order === 'asc') {
-        DataCustomerbyAge.sort((a, b) => a.order_quantity - b.order_quantity);
+        data.sort((a, b) => a.order_quantity - b.order_quantity);
       } else {
-        DataCustomerbyAge.sort((a, b) => b.order_quantity - a.order_quantity);
+        data.sort((a, b) => b.order_quantity - a.order_quantity);
       }
 
-      barChart.data.labels = DataCustomerbyAge.map(item => item.Age_Group);
-      barChart.data.datasets[0].data = DataCustomerbyAge.map(item => item.order_quantity);
-      barChart.update();
+      bar.data.labels = data.map(item => item.Age_Group);
+      bar.data.datasets[0].data = data.map(item => item.order_quantity);
+      bar.update();
     }
 
     // Add event listeners to buttons for sorting

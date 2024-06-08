@@ -4,11 +4,11 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
-    background-color: #2F4454;
+    background-color: #2E4053;
 }
 
 .header{
-    min-height: 100vh;
+    min-height: 145vh;
     width: 100%;
 }
 
@@ -83,8 +83,9 @@ body {
     display: flex;
     flex-wrap: wrap; /* Baris baru untuk setiap 4 kartu */
     gap: 20px; /* Jarak antara setiap kartu */
-    margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
 .team-card {
@@ -92,21 +93,31 @@ body {
     flex-direction: column;
     align-items: center;
     width: calc(25% - 20px); /* 25% lebar untuk 4 kartu dalam satu baris, dikurangi jarak antara kartu */
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
-    border: 2px solid #2F4454;
-    background-color: #2F4454;
+    border: 2px solid #1b2831;
+    background-color: #1b2831;
     transition: 0.3s;
     font-size: 1rem;
-    box-sizing: border-box; /* Perhitungan lebar termasuk padding dan border */
+    box-sizing: border-box;
 }
 
 .team-card p {
     text-align: center;
     color: #f1f1f1;
     font-size: 20px;
-    margin-top: 10px;
-}
+    font-weight: lighter;
+    line-height: 1;
+    margin-top: -5px;
+    margin-bottom: 15px;
+  }
+
+.team-card h3 {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
 .img-box {
     width: 121px;

@@ -20,10 +20,13 @@ fetch('assets/json/customer_by_gender.json')
           {
             label: 'Gender',
             data: [MData.reduce((a, b) => a + b, 0), FData.reduce((a, b) => a + b, 0)],
-            borderColor: "black",
+            borderColor: [
+              'rgb(135, 206, 250)',
+              'rgba(255, 99, 132)'
+            ],
             backgroundColor: [
-              'rgb(255, 99, 132)',
-              'rgb(54, 162, 235)'
+              'rgb(135, 206, 250, 0.2)',
+              'rgba(255, 99, 132, 0.2)'
             ],
             hoverOffset: 4
           }

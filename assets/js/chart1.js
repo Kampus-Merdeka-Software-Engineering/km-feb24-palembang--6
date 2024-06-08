@@ -2,27 +2,19 @@
 fetch('assets/json/revenue_per_location.json')
   .then(response => response.json())
   .then(data => {
-    // Menyalin Data Tertentu dari Setiap Objek dalam Array
-    const DataRevenue = data.map(item => ({
-      State: item.State,
-      revenue: item.revenue
-    }));
-
-    // Log the data to the console
-    console.log(DataRevenue);
-
+    
     const ctx = document.getElementById("chart").getContext("2d");
 
     let barChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: DataRevenue.map(item => item.State),
+        labels: data.map(item => item.State),
         datasets: [
           {
             label: 'Total Revenue',
-            data: DataRevenue.map(item => item.revenue),
-            backgroundColor: "rgb(54, 162, 235)",
-            borderColor: "black",
+            data: data.map(item => item.revenue),
+            backgroundColor: "rgb(135, 206, 250, 0.2)",
+            borderColor: "rgb(135, 206, 250)",
             borderWidth: 1.5
           }
         ]
@@ -38,13 +30,13 @@ fetch('assets/json/revenue_per_location.json')
 
     function updateChart(order) {
       if (order === 'asc') {
-        DataRevenue.sort((a, b) => a.revenue - b.revenue);
+        data.sort((a, b) => a.revenue - b.revenue);
       } else {
-        DataRevenue.sort((a, b) => b.revenue - a.revenue);
+        data.sort((a, b) => b.revenue - a.revenue);
       }
 
-      barChart.data.labels = DataRevenue.map(item => item.State);
-      barChart.data.datasets[0].data = DataRevenue.map(item => item.revenue);
+      barChart.data.labels = data.map(item => item.State);
+      barChart.data.datasets[0].data = data.map(item => item.revenue);
       barChart.update();
     }
 

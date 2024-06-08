@@ -18,12 +18,6 @@ fetch('assets/json/avg_revenue_product_category.json')
       avg_revenue: item.avg_revenue
     }));
 
-    // pengecekan data
-    console.log("Bike Data:", bikeData);
-    console.log("Clothes Data:", clothesData);
-    console.log("Accessories Data:", accessoriesData);
-
-
     const ctx = document.getElementById("chart3").getContext("2d");
 
     let lineChart = new Chart(ctx, {
@@ -34,22 +28,22 @@ fetch('assets/json/avg_revenue_product_category.json')
           {
             label: 'Bike',
             data: bikeData.map(item => item.avg_revenue),
-            backgroundColor: "yellow",
-            borderColor: "black",
+            backgroundColor: "rgba(255, 99, 132)",
+            borderColor: "rgba(255, 99, 132)",
             borderWidth: 1.5
           },
           {
             label: 'Clothes',
             data: clothesData.map(item => item.avg_revenue),
-            backgroundColor: "blue",
-            borderColor: "black",
+            backgroundColor: "rgba(255, 159, 64)",
+            borderColor: "rgba(255, 159, 64)",
             borderWidth: 1.5
           },
           {
             label: 'Accessories',
             data: accessoriesData.map(item => item.avg_revenue),
-            backgroundColor: "green",
-            borderColor: "black",
+            backgroundColor: "rgb(135, 206, 250)",
+            borderColor: "rgb(135, 206, 250)",
             borderWidth: 1.5
           }
         ]

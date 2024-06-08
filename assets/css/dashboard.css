@@ -79,8 +79,8 @@ body {
 }
 
 .custom-select {
-    background-color: #E74C3C;
-    border: 1px solid #E74C3C;
+    background-color: #2E151B;
+    border: 1px solid #2E151B;
     padding: 8px;
     font-size: 1.2rem;
     margin-top: 20px;
@@ -92,23 +92,9 @@ body {
 
 .custom-select option {
     text-align: left;
+    
 }
 
-.filters button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #E74C3C;
-    color: #FFF;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.filters button:hover {
-    background-color: #C0392B;
-}
 
 .dashboard-content {
     flex-basis: 80%;
@@ -163,7 +149,7 @@ body {
 
 .vs-card h4 {
     color: #ffffff;
-    background-color: #656796;
+    background-color: #2E151B;
     text-align: center;
     width: 100%;
     padding: 10px 0;
@@ -174,20 +160,24 @@ body {
     height: 250px;
     width: 100%;
     max-width: 420px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .chart4 {
     height: 230px;
     width: 100%;
     max-width: 320px;
-    margin: 0 auto;
+    margin: auto;
+}
+
+#chart4 {
+    margin: auto;
 }
 
 .chart1 {
     height: 220px;
     width: 93%;
-    margin: 0 auto;
+    margin: auto;
     overflow: auto;
 }
 
@@ -209,17 +199,17 @@ body {
 }
 
 .team-table th {
-    background-color: #A236D0;
+    background-color: #6a303d;
     color: #fff;
 }
 
 .team-table tbody tr:nth-child(even) {
-    background-color: #1E202F;
+    background-color: #2E151B;
     color: #fff;
 }
 
 .team-table tbody tr:nth-child(odd) {
-    background-color: #292A3E;
+    background-color: #3e2929;
     color: #fff;
 }
 
