@@ -8,7 +8,7 @@ body {
 }
 
 .header{
-    min-height: 145vh;
+    min-height: 155vh;
     width: 100%;
 }
 
@@ -82,8 +82,8 @@ body {
 .team-cards {
     display: flex;
     flex-wrap: wrap; /* Baris baru untuk setiap 4 kartu */
-    gap: 20px; /* Jarak antara setiap kartu */
-    margin-bottom: 30px;
+    gap: 25px; /* Jarak antara setiap kartu */
+    margin-bottom: 35px;
     margin-left: 45px;
     margin-right: 45px;
 }
