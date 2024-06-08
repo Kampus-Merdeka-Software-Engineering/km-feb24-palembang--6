@@ -1,0 +1,173 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: #2F4454;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #2E151B;
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+    align-items: right;
+    border-radius: 0 0 25px 25px;
+    height: 50px;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    margin-right: 10px;
+}
+
+.navbar nav{
+    flex: 1;
+    text-align: right;
+}
+
+.navbar nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.aboutus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.team{
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 5%;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap; /* Baris baru untuk setiap 4 kartu */
+    gap: 20px; /* Jarak antara setiap kartu */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 20px); /* 25% lebar untuk 4 kartu dalam satu baris, dikurangi jarak antara kartu */
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #2F4454;
+    background-color: #2F4454;
+    transition: 0.3s;
+    font-size: 1rem;
+    box-sizing: border-box; /* Perhitungan lebar termasuk padding dan border */
+}
+
+.team-card p {
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.img-box {
+    width: 121px;
+    height: 121px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.img-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Geser ke tengah vertikal dan horizontal */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #2E151B;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .navbar .logo {
+        margin-left: 20px;
+    }
+
+    .navbar nav {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .navbar nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .aboutus {
+        width: 90%;
+    }
+
+    .team {
+        font-size: 20px;
+    }
+    .team-card {
+        width: 100%; /* Ubah lebar kartu menjadi 100% agar satu per baris */
+        margin-bottom: 20px; /* Tambahkan jarak antara setiap kartu */
+    }
+}
