@@ -97,27 +97,24 @@ body {
 
 .charts{
     background-color: #1b2831;
-    padding-left: 70px;
     margin-top: 10px;
-    padding-right: 50px;
 }
 .vs-cards {
     display: flex;
     gap: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    margin-left: 60px;
+    margin-right: 40px;
   }
 
 .vs-card{
     width: 100%;
     max-width: 650px;
     border-radius: 10px;
-    height: 500px;
+    height: 400px;
     text-align: center;
     background-color: #1b2831;
     overflow: hidden; /* Menyembunyikan overflow yang melebihi tinggi maksimum */
-    margin-bottom: 20px;
-    margin-top: 30px;
-    
 } 
 
 .vs-card h2{
@@ -129,9 +126,10 @@ body {
     border-radius: 10px 10px 0 0;
 }
 
-.chart{
-    height: 500px; 
-    width: 550px;
+.chart {
+    height: 300px;
+    width: 100%;
+    max-width: 500px;
 }
 
 footer {
@@ -184,8 +182,7 @@ footer {
 
     .vs-cards {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
-
 }
 
