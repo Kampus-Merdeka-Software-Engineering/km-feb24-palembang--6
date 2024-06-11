@@ -2,7 +2,8 @@
 fetch('assets/json/avg_revenue_product_category.json')
   .then(response => response.json())
   .then(data => {
-    // Menyalin Data Tertentu dari Setiap Objek dalam Array
+
+// Menyalin Data dari array 'data' utama
     const bikeData = data.filter(item => item.Product_Category === 'Bikes').map(item => ({
       month_name: item.month_name,
       avg_revenue: item.avg_revenue
@@ -18,8 +19,8 @@ fetch('assets/json/avg_revenue_product_category.json')
       avg_revenue: item.avg_revenue
     }));
 
+// pembuatan chart 
     const ctx = document.getElementById("chart3").getContext("2d");
-
     let lineChart = new Chart(ctx, {
       type: "line",
       data: {
@@ -57,6 +58,6 @@ fetch('assets/json/avg_revenue_product_category.json')
       }
     });
   })
-  .catch(error => console.error('Error loading JSON:', error));
+
 
 

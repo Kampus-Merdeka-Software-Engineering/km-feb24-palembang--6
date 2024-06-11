@@ -3,8 +3,8 @@ fetch('assets/json/customer_by_age_group.json')
   .then(response => response.json())
   .then(data => {
 
+// pembuatan chart
     const ctx = document.getElementById("chart7").getContext("2d");
-
     let bar = new Chart(ctx, {
       type: "bar",
       data: {
@@ -32,4 +32,3 @@ fetch('assets/json/customer_by_age_group.json')
       },
     });
   })
-  .catch(error => console.error('Error loading JSON:', error));

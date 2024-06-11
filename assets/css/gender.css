@@ -100,15 +100,15 @@ body {
 .charts {
     background-color: #1b2831;
     display: flex;
-    justify-content: center; /* Pusatkan isi di dalam elemen */
-    align-items: center; /* Pusatkan isi secara vertikal */
-    flex-direction: column; /* Mengatur tata letak vertikal */
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
     margin-top: 10px;
     margin-bottom: 50px;
 }
 
 .vs-card {
-    width: 100%;
+    width: 90%;
     max-width: 700px;
     border-radius: 10px;
     height: 90%;
@@ -131,7 +131,7 @@ body {
 }
 
 .chart4 {
-    flex: 1; /* Biarkan elemen ini mengambil ruang yang tersedia */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;

@@ -2,16 +2,13 @@
 fetch('assets/json/customer_by_gender.json')
   .then(response => response.json())
   .then(data => {
-    // Separate data by customer gender
+
+// Menyalin Data dari array 'data' utama
     const MData = data.filter(item => item.Customer_Gender === 'M').map(item => item.order_quantity);
     const FData = data.filter(item => item.Customer_Gender === 'F').map(item => item.order_quantity);
 
-    // Log the data to the console
-    console.log("M Data:", MData);
-    console.log("F Data:", FData);
-
+// pembuatan chart
     const ctx = document.getElementById("chart4").getContext("2d");
-
     let doughnutChart = new Chart(ctx, {
       type: "doughnut",
       data: {
@@ -35,4 +32,4 @@ fetch('assets/json/customer_by_gender.json')
       options: {}
     });
   })
-  .catch(error => console.error('Error loading JSON:', error));
+

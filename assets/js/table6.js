@@ -4,7 +4,7 @@ fetch('assets/json/most_ordered_sub_category.json')
   .then(data => {
     const tableBody = document.getElementById("table-body");
 
-    // Membuat baris tabel dari setiap objek dalam data JSON
+// Membuat baris tabel dari setiap objek dalam data JSON
     data.forEach((item, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -16,4 +16,3 @@ fetch('assets/json/most_ordered_sub_category.json')
       tableBody.appendChild(row);
     });
   })
-  .catch(error => console.error('Error loading JSON:', error));

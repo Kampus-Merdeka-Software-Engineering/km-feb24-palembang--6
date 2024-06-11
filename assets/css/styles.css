@@ -125,7 +125,6 @@ footer {
     margin: 0 0 10px;
 }
 
-/* Media Queries */
 
 @media screen and (max-width: 768px) {
     .header-content {
@@ -165,11 +164,11 @@ footer {
     }
 
     .header-content {
-        order: 2; /* Mengubah urutan konten header menjadi kedua */
+        order: 2; 
     }
 
     .header-image {
-        order: 1; /* Mengubah urutan gambar header menjadi pertama */
+        order: 1; 
     }
 }
 

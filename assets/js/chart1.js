@@ -3,8 +3,8 @@ fetch('assets/json/revenue_per_location.json')
   .then(response => response.json())
   .then(data => {
     
+// pembuatan chart
     const ctx = document.getElementById("chart").getContext("2d");
-
     let barChart = new Chart(ctx, {
       type: "bar",
       data: {
@@ -28,6 +28,7 @@ fetch('assets/json/revenue_per_location.json')
       }
     });
 
+// function untuk melakukan asc dan desc
     function updateChart(order) {
       if (order === 'asc') {
         data.sort((a, b) => a.revenue - b.revenue);
@@ -40,8 +41,8 @@ fetch('assets/json/revenue_per_location.json')
       barChart.update();
     }
 
-    // Add event listeners to buttons for sorting
+// Tambahkan event listener ke buttons untuk sorting
     document.getElementById("sortAsc").addEventListener("click", () => updateChart('asc'));
     document.getElementById("sortDesc").addEventListener("click", () => updateChart('desc'));
   })
-  .catch(error => console.error('Error loading JSON:', error));
+
